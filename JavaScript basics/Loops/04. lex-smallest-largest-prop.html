@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <a href="#" onclick="getProperty(window)">Check window</a>
+    <br />
+    <a href="#" onclick="getProperty(document)">Check document</a>
+    <br />
+    <a href="#" onclick="getProperty(navigator)">Check navigator</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function getProperty(selectedElement) {
+
+            var currentSelectedElement = [];
+
+            for (var item in selectedElement) {
+                currentSelectedElement.push(item);
+            }
+
+            currentSelectedElement.sort();
+            jsConsole.writeLine('Lexicographically ordered: ');
+            jsConsole.writeLine('Smallest lex ordered property is: ' +
+                                currentSelectedElement[0]);
+            jsConsole.writeLine('Largest lex ordered property is: ' +
+                                currentSelectedElement[currentSelectedElement.length - 1]);
+        }
+
+    </script>
+</body>
+
+</html>

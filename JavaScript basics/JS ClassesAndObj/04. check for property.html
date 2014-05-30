@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body onload="solve()">
+    <script>
+        function solve() {
+
+            function hasProperty(obj, prpt) {
+                for (var i in obj) {
+                    if (i == prpt) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            var test = {
+                luckyNum: 777,
+                age: 7,
+                phone: 90029
+            }
+
+            var hasPropertyOf = hasProperty(test, "luckyNum");
+            console.log(hasPropertyOf);
+
+        }
+
+    </script>
+</body>
+</html>

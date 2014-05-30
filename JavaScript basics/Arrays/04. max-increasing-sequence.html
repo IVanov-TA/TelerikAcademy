@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-number">Enter array seperated by comma(,) ex(1,2,3,1,1,1)</label>
+    <input type="text" id="tb-number" />
+    <a href="#" id="btn-check-prime" onclick="getIncreasingSequence()">Check increasing frequent</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+        function getIncreasingSequence() {
+
+            var inputNumbersArray = jsConsole.read('#tb-number').split(','),
+                endPosition,
+                indexedNumber = parseInt(inputNumbersArray[0]),
+                bestCounted = 1,
+                currentCounted = 0,
+                i;
+
+
+            for (i = 1; i <= inputNumbersArray.length; i++) {
+
+                var currentNumber = parseInt(inputNumbersArray[i]);
+
+                if (indexedNumber < currentNumber) {
+                    currentCounted++;
+                    indexedNumber = currentNumber;
+
+                } else {
+                    if (bestCounted <= currentCounted) {
+                        bestCounted = currentCounted;
+                        endPosition = i - 1;
+                    }
+
+                    indexedNumber = currentNumber;
+                    currentCounted = 0;
+                }
+            }
+
+            for (i = endPosition - bestCounted; i <= endPosition  ; i++) {
+                jsConsole.write(inputNumbersArray[i] + (i + 1 <= endPosition ? ', ' : ''));
+            }
+
+        }
+
+    </script>
+</body>
+</html>

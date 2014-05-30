@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body onload="compareArrays()">
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function compareArrays() {
+            var firstCharArray = ['a', 'b', 'c', 'g', 'm'],
+                secondCharArray = ['a', 'b', 'f', 'g'],
+                minLenghtOfBoth = Math.min(firstCharArray.length, secondCharArray.length),
+                hasSameChars = true,
+                i;
+
+            jsConsole.writeLine('First array values: ' + firstCharArray.join(', '));
+            jsConsole.writeLine('Second array values: ' + secondCharArray.join(', '));
+
+            jsConsole.write('Result: ');
+            for (i = 0; i < minLenghtOfBoth; i++) {
+
+                if (firstCharArray[i] === secondCharArray[i]) {
+                    continue;
+                } else {
+
+                    if (firstCharArray[i] < secondCharArray[i]) {
+                        jsConsole.writeLine('First array is lex first');
+                    } else {
+                        jsConsole.writeLine('Second array is lex first');
+                    }
+
+                    hasSameChars = false;
+                    break;
+                }
+            }
+
+            if (hasSameChars) {
+                firstCharArray.length === secondCharArray.length ? jsConsole.writeLine('They are identic') : firstCharArray.length < secondCharArray.length ? jsConsole.writeLine('First array is lex first') : jsConsole.writeLine('Second array is lex first');
+            }
+
+        }
+    </script>
+</body>
+</html>

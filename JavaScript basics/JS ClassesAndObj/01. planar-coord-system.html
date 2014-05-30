@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body onload="solve()">
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function solve() {
+
+            function getPoint(x, y) {
+                return {
+                    X: x,
+                    Y: y
+                };
+            }
+
+            function getLine(point1, point2) {
+                return {
+                    Pa: point1,
+                    Pb: point2
+                };
+            }
+
+            function calculateDistanceBetweenPoints(p1, p2) {
+                return Math.sqrt(parseFloat((Math.abs(p1.X - p2.X) * Math.abs(p1.X - p2.X)) + (Math.abs(p1.Y - p2.Y) * Math.abs(p1.Y - p2.Y))));
+            }
+
+            function isPossibleToFormATriangle(line1, line2, line3) {
+                var a = calculateDistanceBetweenPoints(line1.Pa, line1.Pb);
+                var b = calculateDistanceBetweenPoints(line2.Pa, line2.Pb);
+                var c = calculateDistanceBetweenPoints(line3.Pa, line3.Pb);
+
+                if ((a + b > c) && (a + c > b) && (b + c > a)) {
+                    return true;
+                }
+
+                return false;
+            }
+
+
+            var p1 = getPoint(1, 2);
+            var p2 = getPoint(2, 2);
+            var p3 = getPoint(3, 1);
+
+            var line1 = getLine(p1, p2);
+            var line2 = getLine(p2, p3);
+            var line3 = getLine(p1, p3);
+
+            jsConsole.writeLine(isPossibleToFormATriangle(line1, line2, line3));
+
+        }
+
+    </script>
+</body>
+</html>

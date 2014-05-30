@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+        searchCountArray([3, 6, 2, 6, 2, 1, 9, 9, 2, 2], 2);
+
+        jsConsole.writeLine("");
+        jsConsole.writeLine("test function");
+        searchCountArray([1, 2, 4, 7, 3, 9, 7, 90, 0, 33, 7, 4, 55, 7, 7, 9], 7);
+
+        function searchCountArray(arr, number) {
+            jsConsole.writeLine("searched number = " + number);
+            string = arr.join("");
+            jsConsole.writeLine(string);
+            count = 0;
+            for (var i = 0; i < string.length; i++) {
+                if (string.charAt(i) == number) {
+                    count++;
+                }
+            }
+            jsConsole.writeLine("count = " + count);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-number">Enter sequence seperated by comma(,) ex.(1, 2, 3, 4))</label>
+    <input type="text" id="tb-number" />
+    <a href="#" id="btn-check-prime" onclick="findMinMax()">Find Min and Max number</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+        function findMinMax() {
+
+            var i,
+                minSearchedValue = Number.MAX_VALUE,
+                maxSearcheValue = Number.MIN_VALUE,
+                inputNumbersSequence = jsConsole.read("#tb-number").split(",");
+
+            for (i = 0; i < inputNumbersSequence.length; i++) {
+                var currentValue = parseInt(inputNumbersSequence[i]);
+
+                if (minSearchedValue > currentValue) {
+                    minSearchedValue = currentValue;
+                }
+
+                if (currentValue > maxSearcheValue) {
+                    maxSearcheValue = currentValue;
+                }
+            }
+
+            jsConsole.writeLine('Min value in sequence is: ' + minSearchedValue);
+            jsConsole.writeLine('Max value in sequence is: ' + maxSearcheValue);
+        }
+
+    </script>
+</body>
+</html>

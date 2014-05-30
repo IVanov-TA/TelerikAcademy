@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-number">Enter array seperated by comma(,) ex(1,2,1,1,1,1)</label>
+    <input type="text" id="tb-number" />
+    <a href="#" id="btn-check-prime" onclick="sortArray()">Sort it...</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+        function sortArray() {
+
+            var inputNumbersArray = jsConsole.read('#tb-number').split(',');
+
+            jsConsole.writeLine(selectionSort(inputNumbersArray));
+
+        }
+
+        function selectionSort(array) {
+            var i, j, tmp, tmp2;
+            for (i = 0; i < array.length - 1; i++) {
+                tmp = i;
+                for (j = i + 1; j < array.length; j++)
+                    if (array[j] < array[tmp])
+                        tmp = j;
+
+                tmp2 = array[tmp];
+                array[tmp] = array[i];
+                array[i] = tmp2;
+            }
+
+            return array;
+        }
+
+    </script>
+</body>
+</html>

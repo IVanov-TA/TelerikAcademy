@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <textarea id="ta-text">Lorem ipsum dolor sit amet, agam pertinacia mei ei.Lorem ipsum dolor sit amet, agam pertinacia mei ei.Lorem ipsum dolor sit amet, agam pertinacia mei ei.Lorem ipsum dolor sit amet, agam pertinacia mei ei. </textarea>
+    <label for="tb-word">Enter word: </label>
+    <input type="text" id="tb-word" />
+    <a href="#" id="btn-check-prime" onclick="getWordCount()">Get Words</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function getWordCount() {
+
+            var word = jsConsole.read('#tb-word'),
+                source = jsConsole.read('#ta-text');
+
+            jsConsole.writeLine(searchInText(source, word));
+        }
+
+        function searchInText(source, word, isCaseSensitive) {
+            var re = new RegExp('\\b' + word + '\\b', "g");
+            if (isCaseSensitive === true)
+                re = new RegExp('\\b' + word + '\\b', "gi");
+            return source.match(re);
+        }
+
+    </script>
+</body>
+</html>

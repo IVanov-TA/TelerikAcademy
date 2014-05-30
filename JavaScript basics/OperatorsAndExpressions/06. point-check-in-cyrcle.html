@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operators and Expressions - Arithmetic Operators</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="inputdiv">
+        <label for="tb-first">Enter X: </label>
+        <input type="text" id="tb-first" />
+
+        <label for="tb-second">Enter Y: </label>
+        <input type="text" id="tb-second" />
+
+        <input type="button" onclick="solveIsue()" value="Check" />
+    </div>
+
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function solveIsue() {
+            var X = jsConsole.readFloat("#tb-first");
+            var Y = jsConsole.readFloat("#tb-second");
+            var radius = 5;
+            if ((X * X + Y * Y) <= radius * radius) {
+                jsConsole.writeLine("Point (" + X + "," + Y + ") is within circle K(0,5)");
+            }
+            else {
+                jsConsole.writeLine("Point (" + X + "," + Y + ") is outside circle K(0,5)");
+            }
+        }
+    </script>
+</body>
+</html>

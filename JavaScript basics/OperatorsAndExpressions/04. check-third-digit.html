@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operators and Expressions - Arithmetic Operators</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <form>
+        <label for="number-input">Enter number:</label>
+        <input type="text" id="number-input" />
+        <input type="button" onclick="solveIsue()" value="Chech" />
+    </form>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function solveIsue() {
+            var first = jsConsole.readFloat("#number-input");
+
+            var buffer = parseInt(first / 100)
+            if (buffer % 10 == 7) {
+                jsConsole.writeLine("Third digit of number: " + first + " is 7");
+            }
+            else {
+                jsConsole.writeLine("Third digit of number: " + first + " is NOT 7");
+            }
+        }
+    </script>
+</body>
+</html>

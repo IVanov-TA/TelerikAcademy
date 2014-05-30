@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-number">Enter number: </label>
+    <input type="text" id="tb-number" />
+    <a href="#" id="btn-check-prime" onclick="getStringRepresentation()">Convert last digit</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function getStringRepresentation() {
+
+            var number = jsConsole.readInteger('#tb-number');
+            jsConsole.writeLine(convertLastDigitToString(number));
+        }
+
+        function convertLastDigitToString(number) {
+
+            var digit = number % 10,
+                digitStringValue;
+
+            switch (digit) {
+                case 0: digitStringValue = 'zero'; break;
+                case 1: digitStringValue = 'one'; break;
+                case 2: digitStringValue = 'two'; break;
+                case 3: digitStringValue = 'three'; break;
+                case 4: digitStringValue = 'four'; break;
+                case 5: digitStringValue = 'five'; break;
+                case 6: digitStringValue = 'six'; break;
+                case 7: digitStringValue = 'seven'; break;
+                case 8: digitStringValue = 'eight'; break;
+                case 9: digitStringValue = 'nine'; break;
+                default: return 'Incorect number';
+            }
+
+            return digitStringValue;
+        }
+
+    </script>
+</body>
+</html>

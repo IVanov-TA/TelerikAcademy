@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-number">Enter array seperated by comma(,) ex(1,2,1,1,1,1)</label>
+    <input type="text" id="tb-number" />
+    <a href="#" id="btn-check-prime" onclick="getFrequentNumber()">Get Number...</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+        function getFrequentNumber() {
+
+            var inputNumbersArray = jsConsole.read('#tb-number').split(','),
+                bestScore = 0,
+                targetNumber,
+                i,
+                j;
+
+            for (i = 0; i < inputNumbersArray.length - 1; i += 1) {
+
+                var currentNumber = parseInt(inputNumbersArray[i]);
+                var currentScore = 1;
+
+                for (j = i + 1; j < inputNumbersArray.length; j += 1) {
+                    if (currentNumber === parseInt(inputNumbersArray[j])) {
+                        currentScore++;
+                    }
+                }
+
+                if (bestScore < currentScore) {
+                    bestScore = currentScore;
+                    targetNumber = currentNumber;
+                }
+            }
+
+            jsConsole.writeLine('Most frequent number in arr is ' + targetNumber + ' and it repeats ' + bestScore + ' times.');
+        }
+
+    </script>
+</body>
+</html>

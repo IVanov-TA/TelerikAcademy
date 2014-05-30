@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body onload="createArray()">
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function createArray() {
+            var i,
+                indexMultiplier = 5,
+                arrayLenght = 20,
+                arrayToCreate = [];
+
+            for (i = 0; i < arrayLenght; i++) {
+                arrayToCreate[i] = i * indexMultiplier;
+            }
+            jsConsole.writeLine('Array with 20 elements')
+            jsConsole.writeLine(arrayToCreate.join(", "));
+        }
+
+    </script>
+</body>
+</html>

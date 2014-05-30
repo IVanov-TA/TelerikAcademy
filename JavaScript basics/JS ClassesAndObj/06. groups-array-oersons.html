@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body onload="solve()">
+    <script>
+        function solve() {
+
+            function group(arr, prpt) {
+
+                var groupedArr = [];
+
+                var finalArray = [];
+
+                if (prpt == "age") {
+
+                    var reppeatlessElements = [];
+
+                    for (var i = 0; i < arr.length; i++) {
+
+                        var reppeat = false;
+
+                        for (var j = 0; j < i; j++) {
+                            if (arr[i].age == arr[j].age) {
+                                reppeat = true;
+                                break;
+                            }
+                        }
+
+                        if (reppeat == false) {
+                            reppeatlessElements.push(arr[i]);
+                        }
+                    }
+
+                    for (var i = 0; i < reppeatlessElements.length; i++) {
+                        var tempArr = [];
+
+                        for (var j = 0; j < arr.length; j++) {
+                            if (reppeatlessElements[i].age == arr[j].age) {
+                                tempArr.push(arr[j]);
+                            }
+                        }
+                        groupedArr.push(tempArr);
+                    }
+
+                    for (var i = 0; i < groupedArr.length; i++) {
+                        finalArray.push({ Key: groupedArr[i][0].age, Value: groupedArr[i] });
+                    }
+
+                }
+                else {
+                    var reppeatlessElements = [];
+
+                    for (var i = 0; i < arr.length; i++) {
+
+                        var reppeat = false;
+
+                        for (var j = 0; j < i; j++) {
+                            if (arr[i].firstname == arr[j].firstname) {
+                                reppeat = true;
+                                break;
+                            }
+                        }
+
+                        if (reppeat == false) {
+                            reppeatlessElements.push(arr[i]);
+                        }
+                    }
+
+                    for (var i = 0; i < reppeatlessElements.length; i++) {
+                        var tempArr = [];
+
+                        for (var j = 0; j < arr.length; j++) {
+                            if (reppeatlessElements[i].firstname == arr[j].firstname) {
+                                tempArr.push(arr[j]);
+                            }
+                        }
+                        groupedArr.push(tempArr);
+                    }
+
+                    for (var i = 0; i < groupedArr.length; i++) {
+                        finalArray.push({ Key: groupedArr[i][0].firstname, Value: groupedArr[i] });
+                    }
+                }
+
+                return finalArray;
+            }
+
+            var persons = [
+                            { firstname: "Gosho", lastname: "Petrov", age: 32 },
+                            { firstname: "Bay", lastname: "Ivan", age: 81 },
+                            { firstname: "Mitaka", lastname: "Divaka", age: 12 },
+                            { firstname: "Gosho1", lastname: "Petrov", age: 32 },
+                            { firstname: "Bai", lastname: "Ivan", age: 11 },
+                            { firstname: "Mitaka2", lastname: "Divaka", age: 16 }
+                         ];
+
+            console.log("grouprd by age");
+
+            var a = group(persons, "age");
+
+            for (var i in a) {
+                console.log(a[i]);
+            }
+
+            console.log("grouprd by firstname");
+
+            var b = group(persons, "firstname");
+
+            for (var i in b) {
+                console.log(b[i]);
+            }
+        }
+
+    </script>
+</body>
+</html>

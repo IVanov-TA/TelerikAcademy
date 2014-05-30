@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operators and Expressions - Arithmetic Operators</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="inputdiv">
+
+        <label for="tb-first">Enter X: </label>
+        <input type="text" id="tb-first" />
+
+        <label for="tb-second">Enter Y: </label>
+        <input type="text" id="tb-second" />
+
+        <input type="button" onclick="sovleIsue()" value="Check" />
+
+    </div>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+
+
+        function sovleIsue() {
+            var X = jsConsole.readFloat("#tb-first");
+            var Y = jsConsole.readFloat("#tb-second");
+            var Xc = 1;
+            var Yc = 1;
+            var radius = 3;
+            var XL = -1;
+            var YL = 1;
+            var width = 6;
+            var height = 3;
+            var XR = XL + width;
+            var YR = YL - height;
+            var InCircle = false;
+            var InRec = false;
+
+            if (((X - Xc) * (X - Xc) + (Y - Yc) * (Y - Yc)) <= radius * radius) {
+                InCircle = true;
+            } else {
+                InCircle = false;
+            }
+
+            if ((X > XL && X < XR) && (Y < YL && Y > YR)) {
+                InRec = true;
+            } else {
+                InRec = false;
+            }
+
+            if (InCircle == true && InRec == false) {
+                jsConsole.writeLine("Point (" + X + "," + Y + ") is within circle K((" + Xc + "," + Yc + ")," + radius + ") and out of rectangle R(top=" + XL + ", left=" + YL + ", width=" + width + ", height={" + height + ").");
+            } else {
+                jsConsole.writeLine("Point (" + X + "," + Y + ") is within circle K((" + Xc + "," + Yc + ")," + radius + ") and out of rectangle R(top=" + XL + ", left=" + YL + ", width=" + width + ", height={" + height + ") is NOT correct.");
+            }
+
+        }
+    </script>
+</body>
+</html>

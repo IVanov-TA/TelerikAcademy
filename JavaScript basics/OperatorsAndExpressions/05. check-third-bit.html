@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Operators and Expressions - Arithmetic Operators</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <form>
+        <label for="number-input">Enter number:</label>
+        <input type="text" id="number-input" />
+        <input type="button" onclick="solveIsue()" value="Chech" />
+    </form>
+
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        function solveIsue() {
+            var Number = jsConsole.readInteger("#number-input");
+
+            var p = 3;
+            var mask = 1 << p;
+            var result = Number & mask;
+            var bit = result >> p;
+
+            jsConsole.writeLine("Third bit of number " + Number.toString(2) + " is:" + bit);
+        }
+    </script>
+</body>
+</html>

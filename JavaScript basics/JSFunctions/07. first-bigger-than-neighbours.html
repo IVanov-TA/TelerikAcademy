@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loops - while loop</title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <label for="tb-array">Enter array: </label>
+    <input type="text" id="tb-array" />
+
+    <a href="#" onclick="checkPosition()">Check...</a>
+    <div id="js-console">
+    </div>
+    <script src="scripts/js-console.js">
+
+    </script>
+    <script>
+        function checkPosition() {
+
+            var inputArray = jsConsole.read('#tb-array').split(',');
+
+            jsConsole.writeLine(GetIndexOfFirstBiggerNumbe(inputArray));
+
+        }
+
+        function GetIndexOfFirstBiggerNumbe(source) {
+
+            for (var i = 0; i < source.length; i++) {
+                if (IsBiggerThanNighboars(source, i))
+                    return i;
+            }
+            return -1;
+        }
+
+        function IsBiggerThanNighboars(source, position) {
+            if (position - 1 >= 0 && position + 1 < source.length) {
+                if (source[position - 1] < source[position] && source[position] > source[position + 1])
+                    return true;
+            }
+            return false;
+        }
+
+    </script>
+</body>
+</html>

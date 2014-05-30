@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AA92427-EA51-42FF-8CA5-91DF940D6000}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Data</RootNamespace>
+    <AssemblyName>Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Characters\Character.cs" />
+    <Compile Include="Characters\Enemies\Enemy.cs" />
+    <Compile Include="Characters\IFightable.cs" />
+    <Compile Include="Characters\IImprovable.cs" />
+    <Compile Include="Characters\Movement\Direction.cs" />
+    <Compile Include="Characters\Movement\MazeSolver.cs" />
+    <Compile Include="Characters\Movement\Movement.cs" />
+    <Compile Include="Characters\PlayerCharacters\PlayerCharacter.cs" />
+    <Compile Include="Exceptions\GameEndException.cs" />
+    <Compile Include="GridViewItem\GridViewItem.cs" />
+    <Compile Include="GridViewItem\LevelGrid.cs" />
+    <Compile Include="Images.cs" />
+    <Compile Include="Items\ItemsCollections\Inventories\Equipment.cs" />
+    <Compile Include="Items\DefenceItems\DefenceItem.cs" />
+    <Compile Include="Items\DefenceItems\IDefensible.cs" />
+    <Compile Include="Items\ItemsCollections\Inventories\Inventory.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\ItemsCollections\ItemsCollection.cs" />
+    <Compile Include="Items\IWearable.cs" />
+    <Compile Include="Items\IWeightable.cs" />
+    <Compile Include="Items\Key.cs" />
+    <Compile Include="Items\Money\ITransactable.cs" />
+    <Compile Include="Items\Money\Money.cs" />
+    <Compile Include="Items\Potions\HealthPotion.cs" />
+    <Compile Include="Items\Potions\IConsumable.cs" />
+    <Compile Include="Items\Potions\ManaPotion.cs" />
+    <Compile Include="Items\Potions\Potion.cs" />
+    <Compile Include="Items\Potions\PotionsCollection.cs" />
+    <Compile Include="Items\Potions\StrengthPotion.cs" />
+    <Compile Include="Items\Weapons\IDamageDealable.cs" />
+    <Compile Include="Items\Weapons\Weapon.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="GridViewItem\Position.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShotLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

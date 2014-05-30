@@ -1,0 +1,4 @@
+word even is not = equal
+as equal is not = same
+same is not equal to even
+but they are all same same same

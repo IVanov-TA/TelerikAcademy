@@ -1,0 +1,4 @@
+﻿same-5
+equal-3
+not-3
+even-2

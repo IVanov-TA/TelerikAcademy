@@ -1,9 +1,21 @@
 function getInnerDivs(){
+	// variant with getElementByTagName
+	console.log('Get div with getElementByTagName: ');
 	var divCollection = document.getElementsByTagName('div');
 	for (var i = 0, len = divCollection.length; i < len; i += 1) {
 		if (divCollection[i].parentNode instanceof HTMLDivElement) {
 			console.log(divCollection[i].innerText);
 		}
+	}
+
+	console.log('---------------------');
+
+	// variant with querySelcetorAll
+	console.log('Get div with querySelcetorAll: ');
+	var queryDiv = document.querySelectorAll('div div');
+	
+	for (var i = 0, len = queryDiv.length; i < len; i += 1) {
+		console.log(queryDiv[i].innerText);
 	}
 }
 

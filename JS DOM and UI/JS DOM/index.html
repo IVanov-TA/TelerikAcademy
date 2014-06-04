@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>JS DOM Homework</title>
+	<script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+	<p>Open the console F12 to view the result !!! :)</p>
+	<!-- Task 1
+	Write a script that selects all the div nodes that are directly inside other div elements
+	Create a function using querySelectorAll()
+	Create a function using getElementsByTagName() -->
+	<div>
+		<div>I'm div one</div>
+		<div>I'm div two</div>
+		<div>I'm div three</div>
+		<div>I'm div four</div>
+		<div>I'm div five</div>
+	</div>
+	<button onclick= "getInnerDivs()">GetDivs</button>
+	<br>
+	<!--  Task 2 -->
+	<input type="text" placeholder="Enter some text here...">
+	<button onclick="getData()">GetData</button>
+	<br>
+	<!-- Task 3 -->
+	<label for="bgCollor">Set backGround color: </label>
+	<input type="color" name="bgCollor" onchange="setBackgroundColor()">
+</body>
+</html>

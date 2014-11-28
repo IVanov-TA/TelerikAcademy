@@ -1,0 +1,14 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Insert Elements Before And After Other Element</title>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+    <div id="center">MIDDLE DIV ELEMNT</div>
+    <script> 
+        $('<div>BEFORE</div>').insertBefore($('#center'));
+        $($('<div />').html('AFTER')).insertAfter($('#center'));
+    </script>
+</body>
+</html>

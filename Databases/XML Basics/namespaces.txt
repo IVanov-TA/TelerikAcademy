@@ -1,0 +1,8 @@
+Namespaces make it easier to come up with unique names.
+Imagine how hard it would be to name your next child if
+the name had to be unique across the face of the earth.
+Restricting uniqueness to a more limited context,
+like my set of children, simplifies things tremendously.
+When I name my next child, my only consideration is that
+I don't use the same name that I already used for one of
+my other children.

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <person>
+    <name>Kolio</name>
+    <address>Moscow</address>
+    <phoneNumber>0897333333</phoneNumber>
+  </person>
+  <person>
+    <name>Pe6o</name>
+    <address>Bulgaria</address>
+    <phoneNumber>998826622</phoneNumber>
+  </person>
+  <person>
+    <name>Kamen</name>
+    <address>Sofia</address>
+    <phoneNumber>123123123</phoneNumber>
+  </person>
+  <person>
+    <name>Denica</name>
+    <address>Bourgas</address>
+    <phoneNumber>1832772</phoneNumber>
+  </person>
+</data>

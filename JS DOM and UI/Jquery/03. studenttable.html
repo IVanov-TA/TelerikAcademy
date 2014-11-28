@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Students Table</title>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            width: 90px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+    </table>
+
+    <script>
+        var studentData = [{
+            firstName: 'Petar',
+            lastName: 'Ivanov',
+            grade: 3
+        }, {
+            firstName: 'Milena',
+            lastName: 'Grigorova',
+            grade: 6
+        }, {
+            firstName: 'Gergana',
+            lastName: 'Borisova',
+            grade: 12
+        }, {
+            firstName: 'Boyko',
+            lastName: 'Petrov',
+            grade: 7
+        }];
+
+        var $tbody = $('tbody');
+
+        for (var i = 0; i < studentData.length; i++) {
+
+            var $tr = $('<tr>');
+           
+            $tbody.append($tr
+                .append($('<td />').html(studentData[i].firstName))
+                .append($('<td />').html(studentData[i].lastName))
+                .append($('<td />').html(studentData[i].grade)));
+        }
+
+    </script>
+</body>
+</html>

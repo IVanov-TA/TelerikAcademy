@@ -1,0 +1,129 @@
+<Catalogue>
+  <Artist name="SomeOneElse">
+    <Album name="Kolko">
+      <Year>2222</Year>
+      <Producer>Nikoi si</Producer>
+      <Price>6.99</Price>
+      <Songs>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>9.41</Duration>
+        </Song>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>2.33</Duration>
+        </Song>
+        <Song>
+          <Title>Mai mi e zle</Title>
+          <Duration>2.33</Duration>
+        </Song>
+        <Song>
+          <Title>Ne mi puka</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>9.41</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>2.33</Duration>
+        </Song>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>2.33</Duration>
+        </Song>
+      </Songs>
+    </Album>
+  </Artist>
+  <Artist name="John Carter">
+    <Album name="Vechno omazan">
+      <Year>2222</Year>
+      <Producer>Nikoi si</Producer>
+      <Price>3.55</Price>
+      <Songs>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Sigurno sam se pobarkal</Title>
+          <Duration>2.33</Duration>
+        </Song>
+        <Song>
+          <Title>Ne mi puka</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Ne mi puka</Title>
+          <Duration>9.41</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Mai mi e zle</Title>
+          <Duration>44.43</Duration>
+        </Song>
+        <Song>
+          <Title>Mai mi e zle</Title>
+          <Duration>44.43</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>2.77</Duration>
+        </Song>
+      </Songs>
+    </Album>
+  </Artist>
+  <Artist name="NeMiPuka">
+    <Album name="Vechno omazan">
+      <Year>1898</Year>
+      <Producer>Nikoi si</Producer>
+      <Price>9.99</Price>
+      <Songs>
+        <Song>
+          <Title>Mai mi e zle</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Ne mi puka</Title>
+          <Duration>2.33</Duration>
+        </Song>
+        <Song>
+          <Title>Ne mi puka</Title>
+          <Duration>2.77</Duration>
+        </Song>
+        <Song>
+          <Title>Mai mi e zle</Title>
+          <Duration>9.41</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>9.41</Duration>
+        </Song>
+        <Song>
+          <Title>Shto gi chetesh tiq raboti</Title>
+          <Duration>2.33</Duration>
+        </Song>
+      </Songs>
+    </Album>
+  </Artist>
+</Catalogue>

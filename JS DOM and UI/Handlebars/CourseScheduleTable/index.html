@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Course Schedule Table Program</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td{
+            border: 1px solid black;
+        }
+        th{
+            color: white;
+            background-color: #808080;
+        }
+        tr:nth-child(2n){
+            background-color: lightgray;
+        }
+        tr td:nth-child(2){
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script id="template" type="text/x-template-handlebars">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        N
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Date #1
+                    </th>
+                    <th>
+                        Date #2
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data}}
+                <tr>
+                    <td>{{@index}}</td>
+                    <td>{{courseName}}</td>
+                    <td>{{courseDateOne}}</td>
+                    <td>{{courseDateTwo}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </script>
+
+    <script src="libs/handlebars.min.js"></script>
+    <script>
+        var data =  [{
+            courseName: "Course Introduction",
+            courseDateOne: "Wed 18:00, 28-May-2014",
+            courseDateTwo: "Thu 14:00, 29-May-2014"
+        }, {
+            courseName: "Document Object Model",
+            courseDateOne: "Wed 18:00, 28-May-2014",
+            courseDateTwo: "Thu 14:00, 29-May-2014"
+        }, {
+            courseName: "HTML5 Canvas",
+            courseDateOne: "Thu 18:00, 29-May-2014",
+            courseDateTwo: "Fri 14:00, 30-May-2014"
+        }, {
+            courseName: "KineticJS Overview",
+            courseDateOne: "Thu 18:00, 29-May-2014",
+            courseDateTwo: "Fri 14:00, 30-May-2014"
+        }, {
+            courseName: "SVG and RaphaelJS",
+            courseDateOne: "Wed 18:00, 04-Jun-2014",
+            courseDateTwo: "Thu 14:00, 05-Jun-2014"
+        }, {
+            courseName: "Animations with Canvas and SVG",
+            courseDateOne: "Wed 18:00, 04-Jun-2014",
+            courseDateTwo: "Thu 14:00, 05-Jun-2014"
+        }, {
+            courseName: "DOM operations",
+            courseDateOne: "Thu 18:00, 05-Jun-2014",
+            courseDateTwo: "Fri 14:00, 06-Jun-2014"
+        }, {
+            courseName: "Event model",
+            courseDateOne: "Thu 18:00, 05-Jun-2014",
+            courseDateTwo: "Fri 14:00, 06-Jun-2014"
+        }, {
+            courseName: "jQuery overview",
+            courseDateOne: "Wed 18:00, 11-Jun-2014",
+            courseDateTwo: "Thu 14:00, 12-Jun-2014"
+        }, {
+            courseName: "HTML templates",
+            courseDateOne: "Wed 18:00, 11-Jun-2014",
+            courseDateTwo: "Thu 14:00, 12-Jun-2014"
+        }, {
+            courseName: "Exam preparation",
+            courseDateOne: "Thu 18:00, 12-Jun-2014",
+            courseDateTwo: "Fri 14:00, 13-Jun-2014"
+        }, {
+            courseName: "Exam",
+            courseDateOne: "Tue 10:00, 17-Jun-2014",
+            courseDateTwo: "Tue 16:30, 17-Jun-2014"
+        }, {
+            courseName: "Teamwork Defense",
+            courseDateOne: "Thu 10:00, 19-Jun-2014",
+            courseDateTwo: "Thu 10:00, 19-Jun-2014"
+        }];
+
+        var templateNode = document.getElementById('template');
+        var templateText = templateNode.innerHTML;
+        var template = Handlebars.compile(templateText);
+        var articleHTML = template({data: data});
+        console.log(articleHTML);
+
+        var tableContainer = document.getElementById('root');
+        tableContainer.innerHTML = articleHTML;
+        // document.body.innerHTML = articleHTML;
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+XML stands for EXtensible Markup Language
+XML is a markup language much like HTML
+XML was designed to carry data, not to display data
+XML tags are not predefined. You must define your own tags
+XML is designed to be self-descriptive
+
+-XML Usage:
+XML is Everywhere.
+XML is now as important for the Web as HTML was to the foundation of the Web.
+XML is the most common tool for data transmissions between all sorts of applications.

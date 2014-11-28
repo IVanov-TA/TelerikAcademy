@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slider Control</title>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <style>
+        #root {
+            width: 550px;
+            height: 550px;
+        }
+
+        #slide-container {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin: auto;
+        }
+
+        #btn-holder {
+            width: 550px;
+            text-align: center;
+        }
+
+        img, object, .special {
+            width: 500px;
+            height: 500px;
+        }
+
+        .special {
+            background-color: #4cff00;
+            color: #ff006e;
+            font-size: 7em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="slide-container"></div>
+    </div>
+    <div id="btn-holder">
+        <button id="btn-left">&lt;</button>
+        <button id="btn-slide-show">Start SlideShow</button>
+        <button id="btn-right">&gt;</button>
+    </div>
+    <script>
+        var data = [
+            '<div class="special">This is special DIV</div>',
+            '<img src = "http://2.bp.blogspot.com/-f8DpBh7JoTs/UcNzZj-PWnI/AAAAAAAAAeE/DvrXm4D1rf4/s640/concept-cars-lamborghini-egoista-xl-amazing-super-car.jpg" />',
+            '<img src = "http://www.funnyloves.com/wp-content/uploads/2013/01/touch-my-cake.jpg" />',
+            '<div class="special">Another Special DIV</div>'],
+            counter = 0,
+            isPlaying = false;
+
+        setSlide();
+
+        $('#btn-right').on('click', nextSlide);
+        $('#btn-left').on('click', prevSlide);
+        $('#btn-slide-show').on('click', setSlideShow);
+
+        function nextSlide() {
+            counter++;
+            if (counter === data.length) {
+                counter = 0;
+            }
+
+            $('#slide-container').fadeOut(100);
+            setInterval(setSlide, 500);
+        }
+
+        function prevSlide() {
+            counter--;
+            if (counter < 0) {
+                counter = data.length - 1;
+            }
+
+            $('#slide-container').fadeOut(100);
+            setInterval(setSlide, 500);
+        }
+
+        function setSlideShow() {
+
+            var $this = $(this);
+
+            if (isPlaying) {
+                $this.html('Start SlideShow');
+                isPlaying = !isPlaying;
+            } else {
+                isPlaying = !isPlaying;
+                runSlideShow();
+                $this.html('Stop SlideShow');
+            }
+
+
+        }
+
+        function setSlide() {
+            $('#slide-container').html(data[counter]).fadeIn(1000);
+        }
+
+        function runSlideShow() {
+            if (isPlaying) {
+                setTimeout(nextSlide, 5000);
+                setTimeout(runSlideShow, 5000);
+            }
+        }
+
+    </script>
+</body>
+</html>

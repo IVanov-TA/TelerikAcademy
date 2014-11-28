@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="students.xsl"?>
+<studentDb xmlns:studentDb="urn:students">
+  <student>
+    <name>Ivan</name>
+    <sex>M</sex>
+    <birthDay>11.11.1999</birthDay>
+    <phone>0893671271</phone>
+    <email>som@som.com</email>
+    <course>.Net Platform</course>
+    <specialty>Software Engineer</specialty>
+    <fn>503233342</fn>
+    <exams>
+      <exam>
+        <name>C# 1</name>
+        <tutor>Kostov</tutor>
+        <score>200 points</score>
+      </exam>
+      <exam>
+        <name>C# 2</name>
+        <tutor>Kenov</tutor>
+        <score>400 points</score>
+      </exam>
+      <exam>
+        <name>C# OOP</name>
+        <tutor>Minkov</tutor>
+        <score>500 points</score>
+      </exam>
+    </exams>
+    <enrolment>
+      <date>1994-04-01</date>
+      <score>5.5</score>
+    </enrolment>
+    <teacherEndorsments>
+      <endorsment>Algebra</endorsment>
+    </teacherEndorsments>
+  </student>
+  <student>
+    <name>Pesho</name>
+    <sex>M</sex>
+    <birthDay>12.10.1899</birthDay>
+    <phone>08936712651</phone>
+    <email>som@som.com</email>
+    <course>.Net Platform</course>
+    <specialty>Software Engineer</specialty>
+    <fn>5032346542</fn>
+    <exams>
+      <exam>
+        <name>C# 1</name>
+        <tutor>Kostov</tutor>
+        <score>500 points</score>
+      </exam>
+      <exam>
+        <name>C# 2</name>
+        <tutor>Kenov</tutor>
+        <score>400 points</score>
+      </exam>
+      <exam>
+        <name>C# OOP</name>
+        <tutor>Minkov</tutor>
+        <score>200 points</score>
+      </exam>
+    </exams>
+    <enrolment>
+      <date>1994-04-01</date>
+      <score>5.5</score>
+    </enrolment>
+    <teacherEndorsments>
+      <endorsment>Geometry</endorsment>
+    </teacherEndorsments>
+  </student>
+  <student>
+    <name>Goro</name>
+    <sex>M</sex>
+    <birthDay>02.02.2002</birthDay>
+    <phone>089363322221</phone>
+    <email>som@som.com</email>
+    <course>.Net Platform</course>
+    <specialty>Software Engineer</specialty>
+    <fn>502222222</fn>
+    <exams>
+      <exam>
+        <name>C# 1</name>
+        <tutor>Kostov</tutor>
+        <score>222 points</score>
+      </exam>
+      <exam>
+        <name>C# 2</name>
+        <tutor>Kenov</tutor>
+        <score>222 points</score>
+      </exam>
+      <exam>
+        <name>C# OOP</name>
+        <tutor>Minkov</tutor>
+        <score>222 points</score>
+      </exam>
+    </exams>
+    <enrolment>
+      <date>1994-04-01</date>
+      <score>5.5</score>
+    </enrolment>
+    <teacherEndorsments>
+      <endorsment>Java</endorsment>
+    </teacherEndorsments>
+  </student>
+</studentDb>

@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     tools:context=".MyCameraActivity" 
+     android:background="#D1F0FF">
+      
+          <Button
+              android:id="@+id/btnPost"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="SEND" />
+
+          <EditText
+              android:id="@+id/message"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_toRightOf="@+id/photo"
+              android:ems="10"
+              android:hint="Input your comment and push SEND"
+              android:textSize="16dp" >
+
+              <requestFocus />
+          </EditText>
+
+          <ImageView
+              android:id="@+id/showImg"
+              android:layout_width="350dp"
+              android:layout_height="400dp"
+              android:layout_marginTop="30dp"
+              android:layout_alignParentLeft="true"
+              android:layout_below="@+id/message" />
+
+          <ProgressBar
+              android:id="@+id/iPostLoader"
+              style="?android:attr/progressBarStyleLarge"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/showImg"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="72dp" />
+   
+</RelativeLayout>

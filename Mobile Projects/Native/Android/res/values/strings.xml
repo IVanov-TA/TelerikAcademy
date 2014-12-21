@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FRIENDS\' TOUCH</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="friends_touch">FRIEND\'s\n TOUCH</string>
+	<string name="username">User name</string>
+	<string name="password">Password</string>
+	<string name="login">Login</string>
+	<string name="not_registered">Not registered?</string>
+	<string name="logged">Stay logged</string>
+	<string name="title_activity_main">Current Location in Google Map</string>
+	<string name="txt_reg_password">Password: </string>
+	<string name="txt_reg_confirm_password">Confirm Password: </string>
+	<string name="txt_reg_email">Email: </string>
+	<string name="btn_reg_register">Register</string>
+</resources>
